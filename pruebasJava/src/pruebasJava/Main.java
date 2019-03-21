@@ -21,7 +21,6 @@ public class Main {
 		System.out.println("Mayor:");
 		System.out.println(Lista.mayor());
 		System.out.println("Menor:");
-		System.out.println(Lista.menor());
 	} 
 
 }

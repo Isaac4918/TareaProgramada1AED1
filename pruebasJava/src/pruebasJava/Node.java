@@ -1,9 +1,9 @@
 package pruebasJava;
 
-public class Node {
-	Node next;
+public class Node <T> {
+	Node  next;
 	Node prev;
-	int num;
+	T num;
 	public Node(int num) {
 		this.num = num;
 	}
