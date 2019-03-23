@@ -1,25 +1,26 @@
 package pruebasJava;
 
 public class Node <T> {
-	Node  next;
-	Node prev;
-	T num;
-	public Node(int num) {
-		this.num = num;
+	Node<T> next;
+	Node<T> prev;
+	T value;
+
+	public Node(T value) {
+		this.value = value;
 	}
 	
 	public Node() {
 	}
 	
-	public Node getNext() {
+	public Node<T> getNext() {
 		return next;
 	}
 	
-	public void setNext(Node next) {
+	public void setNext(Node<T> next) {
 		this.next = next;
 	}
 	
-	public Node getPrev() {
+	public Node<T> getPrev() {
 		return prev;
 	}
 	
@@ -27,12 +28,12 @@ public class Node <T> {
 		this.prev = prev;
 	}
 	
-	public int getNum() {
-		return num;
+	public int getValue() {
+		return value;
 	}
 	
-	public void setNum(int num) {
-		this.num = num;
+	public void setValue(T value) {
+		this.value = value;
 	}
 	
 }

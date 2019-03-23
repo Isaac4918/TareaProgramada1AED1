@@ -1,9 +1,9 @@
 package pruebasJava;
 
-public class LinkedList extends Node {
+public class LinkedList <T>{
 	int lenght;
-	Node head;
-	Node tail;
+	Node<T> head;
+	Node<T> tail;
 	
 	public LinkedList() {
 	}
@@ -15,8 +15,8 @@ public class LinkedList extends Node {
 		return false;
 	}
 	
-	public void add(int num) {
-		Node newNode = new Node(num);
+	public void add(T num) {
+		Node<T> newNode = new Node<>(num);
 		if(this.isEmpty()) {
 			this.head = newNode;
 			this.tail = newNode;
@@ -31,7 +31,7 @@ public class LinkedList extends Node {
 	public void print() {
 		Node tmp = this.head;
 		while(tmp != null) {
-			System.out.println(tmp.getNum());
+			System.out.println(tmp.getValue());
 			tmp = tmp.next;
 		}
 	}
@@ -50,39 +50,5 @@ public class LinkedList extends Node {
 		}
 		tmp.next = null;
 		this.tail = tmp;
-	}
-
-	public int mayor() {
-		Node tmp = this.head;
-		if(this.isEmpty()) {
-			System.out.println("La lista está vacía");
-		}
-		int May = tmp.getNum();
-		while(tmp != null) {
-			if(tmp.getNum() > May){
-				May = tmp.getNum();
-			}
-			else {
-				tmp = tmp.next;
-			}
-		}
-		return May;
-	}
-	
-	public int menor() {
-		Node tmp = this.head;
-		if(this.isEmpty()) {
-			System.out.println("La lista está vacía");
-		}
-		int Min = tmp.getNum();
-		while(tmp != null) {
-			if(tmp.getNum() < Min){
-				Min = tmp.getNum();
-			}
-			else {
-				tmp = tmp.next;
-			}
-		}
-		return Min;
 	}
 }
