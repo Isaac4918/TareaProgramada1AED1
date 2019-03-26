@@ -1,34 +1,34 @@
 package pruebasJava;
 
-public class Node <T> {
-	Node<T> next;
-	T value;
+public class Node {
+	Node next;
+	String value;
 
 	public Node() {
 	}
 
-	public Node(T value) {
+	public Node(String value) {
 		this.value = value;
 	}
 
-	public Node(T value, Node<T> next){
+	public Node(String value, Node next){
 		this.value = value;
 		this.next= next;
 	}
 	
-	public Node<T> getNext() {
+	public Node getNext() {
 		return next;
 	}
 	
-	public void setNext(Node<T> next) {
+	public void setNext(Node next) {
 		this.next = next;
 	}
 
-	public T getValue() {
+	public String getValue() {
 		return value;
 	}
 	
-	public void setValue(T value) {
+	public void setValue(String value) {
 		this.value = value;
 	}
 	

@@ -1,12 +1,13 @@
 package pruebasJava;
 
-public class ListaEnlazada<T> {
+public class ListaEnlazada {
     private int size;
-    private Node<T> head;
-    private Node<T> tail;
+    private Node head;
+    private Node tail;
+    ListaEnlazada next;
 
     public ListaEnlazada() {
-        this.head = new Node<>();
+        this.head = new Node();
         this.tail = this.head;
         this.size = 0;
     }
@@ -18,8 +19,8 @@ public class ListaEnlazada<T> {
         return false;
     }
 
-    public void add(T value) {
-        Node<T> newNode = new Node<>(value);
+    public void add(String value) {
+        Node newNode = new Node(value);
         if(this.isEmpty()) {
             this.head = newNode;
             this.tail = newNode;
@@ -31,8 +32,8 @@ public class ListaEnlazada<T> {
         this.size++;
     }
 
-    public void insert(int index, T value) throws Exception {
-        Node<T> tmp = this.head;
+    public void insert(int index, String value) throws Exception {
+        Node tmp = this.head;
         if(index > this.size){
             throw new Exception("Posición mayor a la capacidad de la Lista");
         }
@@ -55,7 +56,7 @@ public class ListaEnlazada<T> {
     }
 
     public void deleUlti() {
-        Node<T> tmp = this.head;
+        Node tmp = this.head;
         if(this.isEmpty()) {
             System.out.println("La lista está vacía");
         }
@@ -66,8 +67,8 @@ public class ListaEnlazada<T> {
         this.tail = tmp;
     }
 
-    public Node<T> Index(int num) throws Exception{
-        Node<T> tmp = this.head;
+    public Node Index(int num) throws Exception{
+        Node tmp = this.head;
         int cont = 0;
         if(this.size >= num) {
             while (cont != num) {
@@ -79,5 +80,13 @@ public class ListaEnlazada<T> {
         else{
             throw new Exception("No hay ningun elemento en esa posición");
         }
+    }
+
+    public ListaEnlazada getNext() {
+        return next;
+    }
+
+    public void setNext(ListaEnlazada next) {
+        this.next = next;
     }
 }
