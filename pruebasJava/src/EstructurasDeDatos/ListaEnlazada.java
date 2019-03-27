@@ -1,4 +1,4 @@
-package pruebasJava;
+package EstructurasDeDatos;
 
 public class ListaEnlazada {
     private int size;
