@@ -1,4 +1,4 @@
-package pruebasJava;
+package Ejecucion;
 
 
 public class Main {
