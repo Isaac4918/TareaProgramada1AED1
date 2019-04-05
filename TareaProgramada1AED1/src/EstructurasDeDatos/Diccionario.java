@@ -1,4 +1,4 @@
-package Logica;
+package EstructurasDeDatos;
 
 public class Diccionario {
 }

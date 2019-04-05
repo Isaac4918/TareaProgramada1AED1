@@ -1,34 +1,34 @@
 package EstructurasDeDatos;
 
-public class Node {
-	Node next;
-	String value;
+public class Node <T>{
+	Node<T> next;
+	T value;
 
 	public Node() {
 	}
 
-	public Node(String value) {
+	public Node(T value) {
 		this.value = value;
 	}
 
-	public Node(String value, Node next){
+	public Node(T value, Node<T> next){
 		this.value = value;
 		this.next= next;
 	}
 	
-	public Node getNext() {
+	public Node<T> getNext() {
 		return next;
 	}
 	
-	public void setNext(Node next) {
+	public void setNext(Node<T> next) {
 		this.next = next;
 	}
 
-	public String getValue() {
+	public T getValue() {
 		return value;
 	}
 	
-	public void setValue(String value) {
+	public void setValue(T value) {
 		this.value = value;
 	}
 	

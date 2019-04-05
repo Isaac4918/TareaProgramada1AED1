@@ -2,11 +2,11 @@ package EstructurasDeDatos;
 
 public class Matriz {
     private int size;
-    private ListaEnlazada head;
-    private ListaEnlazada tail;
+    private ListaLetra head;
+    private ListaLetra tail;
 
     public Matriz(){
-        this.head = new ListaEnlazada();
+        this.head = new ListaLetra();
         this.tail = this.head;
         this.size = 0;
     }
@@ -18,7 +18,7 @@ public class Matriz {
         return false;
     }
 
-    public void add(ListaEnlazada Lista) {
+    public void add(ListaLetra Lista) {
         if(this.Vacia()) {
             this.head = Lista;
             this.tail = Lista;
@@ -30,8 +30,8 @@ public class Matriz {
         this.size++;
     }
 
-    public ListaEnlazada indice(int num) throws Exception{
-        ListaEnlazada tmp = this.head;
+    public ListaLetra indice(int num) throws Exception{
+        ListaLetra tmp = this.head;
         int con = 0;
         if(this.size >= num) {
             while (con != num) {
@@ -43,5 +43,29 @@ public class Matriz {
         else{
             throw new Exception("No hay ninguna lista en esa posición");
         }
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public ListaLetra getHead() {
+        return head;
+    }
+
+    public void setHead(ListaLetra head) {
+        this.head = head;
+    }
+
+    public ListaLetra getTail() {
+        return tail;
+    }
+
+    public void setTail(ListaLetra tail) {
+        this.tail = tail;
     }
 }

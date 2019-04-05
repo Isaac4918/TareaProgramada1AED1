@@ -1,15 +1,15 @@
 package EstructurasDeDatos;
 
-public class ListaEnlazada {
+public class ListaLetra extends Letra {
     private int size;
-    private Node head;
-    private Node tail;
-    ListaEnlazada next;
+    private Letra head;
+    private Letra tail;
+    ListaLetra next;
 
-    public ListaEnlazada() {
-        this.head = new Node();
+    public ListaLetra() {
+        this.head = new Letra();
         this.tail = this.head;
-        this.size = 0;
+        this.size = 15;
     }
 
     public boolean isEmpty() {
@@ -19,34 +19,33 @@ public class ListaEnlazada {
         return false;
     }
 
-    public void add(String value) {
-        Node newNode = new Node(value);
+    public void add(Letra letra) {
         if(this.isEmpty()) {
-            this.head = newNode;
-            this.tail = newNode;
+            this.head = letra;
+            this.tail = letra;
         }
         else {
-            this.tail.next = newNode;
-            this.tail = newNode;
+            this.tail.next = letra;
+            this.tail = letra;
         }
         this.size++;
     }
 
-    public void insert(int index, String value) throws Exception {
-        Node tmp = this.head;
+    public void insert(int index, Letra letra) throws Exception {
+        Letra tmp = this.head;
         if(index > this.size){
             throw new Exception("Posición mayor a la capacidad de la Lista");
         }
-        for(int i= 0; i < index; i++){
+        for(int i= 0; i < index-1; i++){
             tmp = tmp.next;
         }
-        tmp.setValue(value);
+        tmp.setNext(letra);
     }
 
     public void print() {
-        Node tmp = this.head;
+        Letra tmp = this.head;
         while(tmp != null) {
-            System.out.println(tmp.getValue());
+            System.out.println(tmp.getLetra());
             tmp = tmp.next;
         }
     }
@@ -56,7 +55,7 @@ public class ListaEnlazada {
     }
 
     public void deleUlti() {
-        Node tmp = this.head;
+        Letra tmp = this.head;
         if(this.isEmpty()) {
             System.out.println("La lista está vacía");
         }
@@ -67,8 +66,8 @@ public class ListaEnlazada {
         this.tail = tmp;
     }
 
-    public Node Index(int num) throws Exception{
-        Node tmp = this.head;
+    public Letra Index(int num) throws Exception{
+        Letra tmp = this.head;
         int cont = 0;
         if(this.size >= num) {
             while (cont != num) {
@@ -82,11 +81,35 @@ public class ListaEnlazada {
         }
     }
 
-    public ListaEnlazada getNext() {
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public Letra getHead() {
+        return head;
+    }
+
+    public void setHead(Letra head) {
+        this.head = head;
+    }
+
+    public Letra getTail() {
+        return tail;
+    }
+
+    public void setTail(Letra tail) {
+        this.tail = tail;
+    }
+
+    public Letra getNext() {
         return next;
     }
 
-    public void setNext(ListaEnlazada next) {
+    public void setNext(ListaLetra next) {
         this.next = next;
     }
 }
