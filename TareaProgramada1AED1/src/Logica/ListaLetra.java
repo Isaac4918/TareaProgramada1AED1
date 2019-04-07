@@ -1,4 +1,4 @@
-package EstructurasDeDatos;
+package Logica;
 
 public class ListaLetra extends Letra {
     private int size;
@@ -9,7 +9,7 @@ public class ListaLetra extends Letra {
     public ListaLetra() {
         this.head = new Letra();
         this.tail = this.head;
-        this.size = 15;
+        this.size = 0;
     }
 
     public boolean isEmpty() {
@@ -28,18 +28,21 @@ public class ListaLetra extends Letra {
             this.tail.next = letra;
             this.tail = letra;
         }
-        this.size++;
+        this.size ++;
     }
 
-    public void insert(int index, Letra letra) throws Exception {
+    public void insert(int index, Letra letra){
         Letra tmp = this.head;
+        Letra L1 = new Letra("_", 0, 0);
         if(index > this.size){
-            throw new Exception("Posición mayor a la capacidad de la Lista");
+            for(int j=0; j <= index; j++){
+                this.add(L1);
+            }
         }
         for(int i= 0; i < index-1; i++){
             tmp = tmp.next;
         }
-        tmp.setNext(letra);
+        tmp.next = letra;
     }
 
     public void print() {
@@ -66,18 +69,18 @@ public class ListaLetra extends Letra {
         this.tail = tmp;
     }
 
-    public Letra Index(int num) throws Exception{
-        Letra tmp = this.head;
-        int cont = 0;
-        if(this.size >= num) {
-            while (cont != num) {
-                tmp = tmp.next;
-                cont ++;
+    public Letra Index(int indice) throws Exception{
+        Letra letra = this.head;
+        int i = 0;
+        if(this.size >= indice) {
+            while (i != indice) {
+                letra = letra.next;
+                i ++;
             }
-            return tmp;
+            return letra;
         }
         else{
-            throw new Exception("No hay ningun elemento en esa posición");
+            throw new Exception("No hay ninguna lista en esa posición");
         }
     }
 

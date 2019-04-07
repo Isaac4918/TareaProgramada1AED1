@@ -1,4 +1,4 @@
-package EstructurasDeDatos;
+package Logica;
 
 public class Letra {
     String letra;
