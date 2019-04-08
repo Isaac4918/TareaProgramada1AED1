@@ -1,12 +1,12 @@
 package Logica;
 
-public class ListaLetra extends Letra {
+public class Palabra extends Letra {
     private int size;
     private Letra head;
     private Letra tail;
-    ListaLetra next;
 
-    public ListaLetra() {
+
+    public Palabra() {
         this.head = new Letra();
         this.tail = this.head;
         this.size = 0;
@@ -112,7 +112,7 @@ public class ListaLetra extends Letra {
         return next;
     }
 
-    public void setNext(ListaLetra next) {
+    public void setNext(Palabra next) {
         this.next = next;
     }
 }

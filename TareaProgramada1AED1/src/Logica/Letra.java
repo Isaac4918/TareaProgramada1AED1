@@ -4,6 +4,8 @@ public class Letra {
     String letra;
     int valor;
     int cantidad;
+    int posx;
+    int posy;
     Letra next;
 
     public Letra(String letra, int valor, int cantidad) {
@@ -49,5 +51,21 @@ public class Letra {
 
     public void colocar(){
         this.cantidad --;
+    }
+
+    public int getPosx() {
+        return posx;
+    }
+
+    public void setPosx(int posx) {
+        this.posx = posx;
+    }
+
+    public int getPosy() {
+        return posy;
+    }
+
+    public void setPosy(int posy) {
+        this.posy = posy;
     }
 }

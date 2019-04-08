@@ -12,23 +12,51 @@ public class Tablero {
         this.tablero = new Letra[sizex][sizey];
     }
 
-    public void colocarLetra(Letra L1, int x, int y) throws Exception{
-        if(this.tablero[x][y] != null){
+    public Tablero() {
+        this.sizex = 15;
+        this.sizey = 15;
+        this.tablero = new Letra[15][15];
+    }
+
+    public void colocarLetra(Letra L1, int x, int y){
+        if(this.tablero[y][x] == null){
             if(L1.cantidad > 0){
-                this.tablero[x][y] = L1;
+                this.tablero[y][x] = L1;
                 L1.colocar();
+                L1.setPosx(x);
+                L1.setPosy(y);
             }
             else{
-                throw new Exception("Cantidad insuficiente de letras");
+                System.err.println("Cantidad insuficiente de letras");
             }
         }
-        else{
-            throw new Exception("Casilla ocupada");
+        else if(this.tablero[y][x] != null){
+            System.err.println("Casilla ocupada");
         }
     }
 
+    public void printTablero(){
+        String linea = "";
+        for(int i = 0; i<= this.sizex-1; i++){
+            for(int j = 0; j<= this.sizey-1; j++){
+                if(this.tablero[i][j] != null){
+                    linea += "  ";
+                    linea += (this.tablero[i][j]).getLetra();
+                    linea += "  ";
+                }
+                else if(this.tablero[i][j] == null){
+                    linea += this.tablero[i][j];
+                    linea += " ";
+                }
+            }
+            System.out.println(linea);
+            linea = "";
+        }
+    }
+/*
+    public void revisar(Letra L1){
 
-
-
+    }
+*/
 
 }
