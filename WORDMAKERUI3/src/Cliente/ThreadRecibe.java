@@ -30,17 +30,19 @@ public class ThreadRecibe implements Runnable {
                     Logger.getLogger(ThreadRecibe.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 mensaje = (String) entrada.readObject();
-                if (!mensaje.equals(null)) {
+
                     System.out.println(mensaje);
 
 
-                    if (mensaje.equals(cliente.getInetAddress().getHostName())) {
+                    if (mensaje.equals(this.cliente.getInetAddress().getHostName())) {
+                        System.out.println("Si entró");
                         if (contrasenaingresada == false) {
+                            System.out.println("Si entró x2");
                             ThreadEnvia.mensaje = JOptionPane.showInputDialog("Ingrese contrasena");
 
                         }
                     }
-                }
+
                 Thread.sleep(5000);
             }
         } catch (IOException e) {

@@ -32,7 +32,7 @@ public class CreateJson {
 
 
 
-        try (FileWriter file = new FileWriter("C:\\Users\\Kevin Alanis\\IdeaProjects\\test.json")) {
+        try (FileWriter file = new FileWriter("C:\\Users\\Kevin Alanis\\Desktop\\Commits\\test.json")) {
 
             file.write(obj.toJSONString());
             file.flush();

@@ -72,6 +72,7 @@ public class Controller extends Ui implements Runnable {
 
         System.out.println("JOINING GAME");
         t2.start();
+
         cont1.create();
 
         }

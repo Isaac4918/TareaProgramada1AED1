@@ -20,7 +20,7 @@ import javax.swing.*;
 public class ChatPrincipalServidor {
 
     private static ServerSocket servidor;
-    private static String ip="172.18.217.132";
+    private static String ip="172.20.10.2";
     public static int codigo;
     public static int numerodejugadores=2;
     public static String [] nombrejugadores;

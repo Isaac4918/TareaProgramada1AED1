@@ -78,6 +78,7 @@ public class ThreadEnvia implements Runnable {
                 if (numerodejugadores-1<turno){
                     System.out.println("Todas las contrasenas ingresadas correctamente");
                     todascontrasenas=true;
+                    Thread.sleep(5000);
 
                 }
 

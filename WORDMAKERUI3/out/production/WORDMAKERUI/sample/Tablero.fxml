@@ -62,6 +62,8 @@
                </font>
             </Text>
             <Rectangle fx:id="boardspace1" arcHeight="5.0" arcWidth="5.0" fill="#fff91f" height="55.0" layoutX="141.0" layoutY="71.0" onDragDropped="#setBoardtile1" onDragOver="#changeBoardtiles" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="boardspace2" arcHeight="5.0" arcWidth="5.0" fill="#fff91f" height="55.0" layoutX="196.0" layoutY="71.0" onDragDropped="#setBoardtile1" onDragOver="#changeBoardtiles" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="boardspace16" arcHeight="5.0" arcWidth="5.0" fill="#fff91f" height="55.0" layoutX="141.0" layoutY="126.0" onDragDropped="#setBoardtile1" onDragOver="#changeBoardtiles" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="55.0" />
             <Rectangle fx:id="tile1" arcHeight="5.0" arcWidth="5.0" fill="#fffd00" height="111.0" layoutX="1077.0" layoutY="225.0" onDragDetected="#tilehandler" stroke="BLACK" strokeType="INSIDE" width="106.0" />
             <Text fx:id="tileletter1" layoutX="1100.0" layoutY="300.0" onDragDetected="#tilehandler" opacity="0.98" strokeType="OUTSIDE" strokeWidth="0.0" text="text" textAlignment="CENTER">
                <font>

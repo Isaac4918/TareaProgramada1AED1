@@ -17,7 +17,7 @@ public class ChatPrincipalCliente {
 
     private static ServerSocket servidor;
     private static Socket cliente;
-    private static String ip = "172.18.217.132";
+    private static String ip = "172.20.10.2";
 
     public ChatPrincipalCliente() {
 
