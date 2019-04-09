@@ -1,7 +1,6 @@
 package sample;
 
 
-import ClienteFinal.Cliente;
 import Json.CreateJson;
 import Servidor.ChatPrincipalServidor;
 import Cliente.ChatPrincipalCliente;

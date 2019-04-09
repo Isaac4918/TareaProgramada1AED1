@@ -2,17 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/Cliente/ChatPrincipalCliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/Cliente/ChatPrincipalCliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/Cliente/ThreadEnvia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/Cliente/ThreadEnvia.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/Cliente/ThreadRecibe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/Cliente/ThreadRecibe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/ClienteFinal/Cliente.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/Json/CreateJson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/Json/CreateJson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/ServerFinal/Server.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/Servidor/ChatPrincipalServidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/Servidor/ChatPrincipalServidor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/Servidor/Codigo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/Servidor/Codigo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/Servidor/ThreadEnvia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/Servidor/ThreadEnvia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/Servidor/ThreadRecibe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/Servidor/ThreadRecibe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Caso.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Caso.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Controller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Controller$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Controller$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Controller$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Controller$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Controller1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Controller1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/TilesCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/TilesCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Ui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WORDMAKERUI/sample/Ui.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cliente/ChatPrincipalCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cliente/ChatPrincipalCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cliente/ThreadRecibe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cliente/ThreadRecibe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Json/CreateJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Json/CreateJson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Servidor/ChatPrincipalServidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servidor/ChatPrincipalServidor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Servidor/ThreadEnvia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Servidor/ThreadEnvia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Tablero.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Tablero.fxml" afterDir="false" />
     </list>
@@ -26,11 +39,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/WORDMAKERUI3$Main.ic" NAME="Main Coverage Results" MODIFIED="1554527434903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>sample.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/WORDMAKERUI3$ChatPrincipalCliente.ic" NAME="ChatPrincipalCliente Coverage Results" MODIFIED="1554696306654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Cliente.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/WORDMAKERUI3$Main.ic" NAME="Main Coverage Results" MODIFIED="1554527434903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>sample.*</FILTER>
     </SUITE>
   </component>
   <component name="CoverageViewManager">
@@ -92,10 +105,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="216" lean-forward="true" selection-start-line="216" selection-end-line="216" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5284#5285#0" expanded="true" />
+                <element signature="e#5340#5341#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Cliente/ThreadRecibe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="624">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="e#529#530#0" expanded="true" />
                 <element signature="e#567#568#0" expanded="true" />
@@ -104,20 +143,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Tablero.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
+            <state relative-caret-position="6168">
+              <caret line="287" column="209" selection-start-line="287" selection-start-column="209" selection-end-line="287" selection-end-column="209" />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Servidor/ChatPrincipalServidor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
+            <state relative-caret-position="408">
               <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
             </state>
           </provider>
@@ -156,7 +195,6 @@
         <option value="$PROJECT_DIR$/src/sample/Play_UI.java" />
         <option value="$PROJECT_DIR$/src/sample/init.fxml" />
         <option value="$PROJECT_DIR$/src/sample/TilesCreator.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controller1.java" />
         <option value="E:/Downloads/BinaryTree.txt" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/Servidor/ChatPrincipal.java" />
@@ -174,20 +212,21 @@
         <option value="$PROJECT_DIR$/src/Servidor/ThreadRecibe.java" />
         <option value="$PROJECT_DIR$/src/Servidor/ThreadEnvia.java" />
         <option value="$PROJECT_DIR$/src/Json/CreateJson.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/Cliente/ChatPrincipalCliente.java" />
         <option value="$PROJECT_DIR$/src/Servidor/ChatPrincipalServidor.java" />
         <option value="$PROJECT_DIR$/src/Cliente/ThreadRecibe.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/Tablero.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Controller1.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-6" />
-    <option name="y" value="8" />
-    <option name="width" value="974" />
-    <option name="height" value="788" />
+    <option name="x" value="10" />
+    <option name="y" value="112" />
+    <option name="width" value="1026" />
+    <option name="height" value="546" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -198,8 +237,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,6 +277,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,12 +291,12 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554753780952" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554791498668" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/json-simple-1.1.jar!/" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -431,11 +470,12 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1554759763445" duration="5369000" />
+      <workItem from="1554782084544" duration="7933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6690000" />
+    <option name="totallyTimeSpent" value="14623000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -447,20 +487,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="1358" y="-8" width="1456" height="876" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.17776097" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18051577" />
       <window_info id="Structure" order="1" weight="0.12153518" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32932165" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.04608295" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.046025105" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -471,8 +510,10 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.32936078" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32104453" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32078102" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49857143" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -486,42 +527,6 @@
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info anchor="right" id="Coverage" order="11" sideWeight="0.50142854" side_tool="true" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.12846482" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Image Layers" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35339168" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Problems" order="9" />
-      <window_info anchor="bottom" id="Changes" order="10" />
-      <window_info anchor="bottom" id="Profiler" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.32286024" />
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32936078" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="right" id="JetGradle" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Palette" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="right" id="Maven" order="8" />
-      <window_info anchor="right" id="Capture Analysis" order="9" />
-      <window_info anchor="right" id="Palette&#9;" order="10" />
-      <window_info anchor="right" id="Theme Preview" order="11" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -536,9 +541,7 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Tablero.fxml" />
-    <entry file="jrt://C:/Program Files/Java/jdk-10.0.2!/javafx.graphics/javafx/application/Application.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="jrt://C:/Program Files/Java/jdk-10.0.2!/javafx.graphics/javafx/application/Application.class" />
     <entry file="file://$PROJECT_DIR$/src/sample/Menu_UI.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Play_UI.java" />
     <entry file="file://$PROJECT_DIR$/bolsa.png">
@@ -566,32 +569,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/init.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="516">
           <caret line="35" column="105" selection-start-line="35" selection-start-column="105" selection-end-line="35" selection-end-column="105" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java" />
     <entry file="file://F:/socket/Controller.java" />
     <entry file="file://F:/socket/ParseoFuncion.java" />
     <entry file="file://F:/socket/ServerThread.java" />
     <entry file="file://F:/socket/Server.java" />
     <entry file="file://$PROJECT_DIR$/src/Cliente/EnviarContrasena.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/ObjectInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-729">
-          <caret line="1553" selection-start-line="1553" selection-end-line="1553" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/ObjectInputStream.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -602,38 +593,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="82" column="31" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5284#5285#0" expanded="true" />
-            <element signature="e#5340#5341#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ClienteFinal/Cliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ServerFinal/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="68" column="75" selection-start-line="68" selection-start-column="75" selection-end-line="68" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ClienteFinal/Cliente.java" />
+    <entry file="file://$PROJECT_DIR$/src/ServerFinal/Server.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Caso.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -682,13 +643,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/Cliente/ThreadRecibe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="998">
-          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        <state relative-caret-position="624">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servidor/ChatPrincipalServidor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -699,31 +668,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Servidor/ChatPrincipalServidor.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Tablero.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+        <state relative-caret-position="6168">
+          <caret line="287" column="209" selection-start-line="287" selection-start-column="209" selection-end-line="287" selection-end-column="209" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Cliente/ThreadRecibe.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="48">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Tablero.fxml">
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
+        <state relative-caret-position="191">
+          <caret line="216" lean-forward="true" selection-start-line="216" selection-end-line="216" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5284#5285#0" expanded="true" />
+            <element signature="e#5340#5341#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -765,7 +738,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
