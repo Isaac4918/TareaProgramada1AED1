@@ -18,9 +18,9 @@ public class Abecedario {
     public Letra O = new Letra("o", 1, 9);
     public Letra P = new Letra("p", 3, 2);
     public Letra Q = new Letra("q", 5, 1);
-    public Letra R = new Letra("r", 1, 5);
-    public Letra S = new Letra("s", 1, 6);
-    public Letra T = new Letra("t", 1, 4);
+    public Letra R = new Letra("r", 1, 6);
+    public Letra T = new Letra("t", 1, 5);
+    public Letra S = new Letra("s", 1, 4);
     public Letra U = new Letra("u", 1, 5);
     public Letra V = new Letra("v", 4, 1);
     public Letra W = new Letra("w", 3, 2);

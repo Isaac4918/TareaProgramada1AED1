@@ -53,10 +53,4 @@ public class Tablero {
             linea = "";
         }
     }
-/*
-    public void revisar(Letra L1){
-
-    }
-*/
-
 }

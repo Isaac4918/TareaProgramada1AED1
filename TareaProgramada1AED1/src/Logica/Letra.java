@@ -53,6 +53,10 @@ public class Letra {
         this.cantidad --;
     }
 
+    public void devolver(){
+        this.cantidad ++;
+    }
+
     public int getPosx() {
         return posx;
     }
