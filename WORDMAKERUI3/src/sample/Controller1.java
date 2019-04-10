@@ -1,21 +1,33 @@
 package sample;
 
+import javafx.beans.property.BooleanProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.input.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
+import javax.swing.*;
+import java.beans.Visibility;
+import java.io.IOException;
 import java.lang.reflect.Method;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.*;
 
 
 import java.net.URL;
 import java.util.List;
 
-public class Controller1  {
+public class Controller1 {
 
     public Button Button1;
     public Rectangle tile1;
@@ -40,6 +52,8 @@ public class Controller1  {
     public Text tileletter6;
     public Text tilevalue6;
 
+    public boolean primeraLetra = true;
+
     public String savedtilevalue1;
     public String savedtilevalue2;
     public String savedtilevalue3;
@@ -54,22 +68,34 @@ public class Controller1  {
     public Text draggedvalue;
     public Rectangle draggedrect;
     public Text draggedtext;
-    Ui interfaz1=new Ui();
+    public AnchorPane pantalla;
+    public GridPane grid;
+    Ui interfaz1 = new Ui();
 
     public Rectangle boardtile;
     public Text boardtext;
 
 
-
-
-
-
-
-
     public Text source4;
-    public TilesCreator tl= new TilesCreator();
 
-    public void create() throws Exception{
+    private static ServerSocket servidor;
+    private static Socket cliente;
+    private static String ip="10.233.129.213";
+
+
+    ListaEnlazadaPalabra linkedlist=new ListaEnlazadaPalabra();
+
+
+
+    public static int primeraposx=141;
+
+    public static int primeraposy=71;
+
+    public static int separacionpalabras=55;
+
+    public TilesCreator tl = new TilesCreator();
+
+    public void create() throws Exception {
         interfaz1.newUI(1);
     }
 
@@ -83,23 +109,19 @@ public class Controller1  {
         tilevalue7.setOpacity(1);
         System.out.println(tileletter1.getText());
 
-        setTiles(tileletter1,tilevalue1);
-        setTiles(tileletter2,tilevalue2);
-        setTiles(tileletter3,tilevalue3);
-        setTiles(tileletter4,tilevalue4);
-        setTiles(tileletter5,tilevalue5);
-        setTiles(tileletter6,tilevalue6);
-        setTiles(tileletter7,tilevalue7);
+        setTiles(tileletter1, tilevalue1);
+        setTiles(tileletter2, tilevalue2);
+        setTiles(tileletter3, tilevalue3);
+        setTiles(tileletter4, tilevalue4);
+        setTiles(tileletter5, tilevalue5);
+        setTiles(tileletter6, tilevalue6);
+        setTiles(tileletter7, tilevalue7);
         savetilevalue();
-
-
-
-
 
 
     }
 
-    public void setTiles(Text tileletter, Text tilevalue){
+    public void setTiles(Text tileletter, Text tilevalue) {
         tileletter.setText(tl.generatetiles());
         tilevalue.setText(String.valueOf(tl.settilevalue(tileletter.getText())));
 
@@ -113,61 +135,59 @@ public class Controller1  {
         draggedvalue.setVisible(true);
 
 
-
         mouseEvent.consume();
 
     }
 
 
+    public void dragger(Object tile) {
+        if (tile.equals(tile1) || tile.equals(tileletter1) || tile.equals(tilevalue1)) {
+            initdrag(tile1, tileletter1);
+            draggedrect = tile1;
+            draggedtext = tileletter1;
+            draggedvalue = tilevalue1;
 
-    public void dragger(Object tile){
-        if (tile.equals(tile1)||tile.equals(tileletter1)||tile.equals(tilevalue1)) {
-            initdrag(tile1,tileletter1);
-            draggedrect=tile1;
-            draggedtext=tileletter1;
-            draggedvalue=tilevalue1;
-
         }
-        if (tile.equals(tile2)||tile.equals(tileletter2)||tile.equals(tilevalue2)) {
-            initdrag(tile2,tileletter2);
-            draggedrect=tile2;
-            draggedtext=tileletter2;
-            draggedvalue=tilevalue2;
+        if (tile.equals(tile2) || tile.equals(tileletter2) || tile.equals(tilevalue2)) {
+            initdrag(tile2, tileletter2);
+            draggedrect = tile2;
+            draggedtext = tileletter2;
+            draggedvalue = tilevalue2;
         }
-        if (tile.equals(tile3)||tile.equals(tileletter3)||tile.equals(tilevalue3)) {
-            initdrag(tile3,tileletter3);
-            draggedrect=tile3;
-            draggedtext=tileletter3;
-            draggedvalue=tilevalue3;
+        if (tile.equals(tile3) || tile.equals(tileletter3) || tile.equals(tilevalue3)) {
+            initdrag(tile3, tileletter3);
+            draggedrect = tile3;
+            draggedtext = tileletter3;
+            draggedvalue = tilevalue3;
         }
-        if (tile.equals(tile4)||tile.equals(tileletter4)||tile.equals(tilevalue4)) {
-            initdrag(tile4,tileletter4);
-            draggedrect=tile4;
-            draggedtext=tileletter4;
-            draggedvalue=tilevalue4;
+        if (tile.equals(tile4) || tile.equals(tileletter4) || tile.equals(tilevalue4)) {
+            initdrag(tile4, tileletter4);
+            draggedrect = tile4;
+            draggedtext = tileletter4;
+            draggedvalue = tilevalue4;
         }
-        if (tile.equals(tile5)||tile.equals(tileletter5)||tile.equals(tilevalue5)) {
-            initdrag(tile5,tileletter5);
-            draggedrect=tile5;
-            draggedtext=tileletter5;
-            draggedvalue=tilevalue5;
+        if (tile.equals(tile5) || tile.equals(tileletter5) || tile.equals(tilevalue5)) {
+            initdrag(tile5, tileletter5);
+            draggedrect = tile5;
+            draggedtext = tileletter5;
+            draggedvalue = tilevalue5;
         }
-        if (tile.equals(tile6)||tile.equals(tileletter6)||tile.equals(tilevalue6)) {
-            initdrag(tile6,tileletter6);
-            draggedrect=tile6;
-            draggedtext=tileletter6;
-            draggedvalue=tilevalue6;
+        if (tile.equals(tile6) || tile.equals(tileletter6) || tile.equals(tilevalue6)) {
+            initdrag(tile6, tileletter6);
+            draggedrect = tile6;
+            draggedtext = tileletter6;
+            draggedvalue = tilevalue6;
         }
-        if (tile.equals(tile7)||tile.equals(tileletter7)||tile.equals(tilevalue7)) {
-            initdrag(tile7,tileletter7);
-            draggedrect=tile7;
-            draggedtext=tileletter7;
-            draggedvalue=tilevalue7;
+        if (tile.equals(tile7) || tile.equals(tileletter7) || tile.equals(tilevalue7)) {
+            initdrag(tile7, tileletter7);
+            draggedrect = tile7;
+            draggedtext = tileletter7;
+            draggedvalue = tilevalue7;
         }
 
     }
 
-    public void initdrag(Rectangle tile,Text tileletter){
+    public void initdrag(Rectangle tile, Text tileletter) {
         Dragboard db = tile.startDragAndDrop(TransferMode.ANY);
         ClipboardContent cb = new ClipboardContent();
 
@@ -175,76 +195,122 @@ public class Controller1  {
         db.setContent(cb);
 
 
-
     }
 
 
-
-
-
-    public void savetilevalue(){
-        savedtilevalue1=tilevalue1.getText();
-        savedtilevalue2=tilevalue2.getText();
-        savedtilevalue3=tilevalue3.getText();
-        savedtilevalue4=tilevalue4.getText();
-        savedtilevalue5=tilevalue5.getText();
-        savedtilevalue6=tilevalue6.getText();
-        savedtilevalue7=tilevalue7.getText();
+    public void savetilevalue() {
+        savedtilevalue1 = tilevalue1.getText();
+        savedtilevalue2 = tilevalue2.getText();
+        savedtilevalue3 = tilevalue3.getText();
+        savedtilevalue4 = tilevalue4.getText();
+        savedtilevalue5 = tilevalue5.getText();
+        savedtilevalue6 = tilevalue6.getText();
+        savedtilevalue7 = tilevalue7.getText();
     }
 
-    public void changeTiles(int numtileschanged){
+    public void changeTiles(int numtileschanged) {
 
     }
 
-    public void submitButton(MouseEvent mouseEvent) {
-        System.out.println(boardtext1.getText());
+    public void submitButton(MouseEvent mouseEvent) throws IOException {
+        System.out.println("Buscando Servidor...");
+        cliente = new Socket(ip,4999);
+
+        System.out.println("Conectado a: "+cliente.getInetAddress().getHostName());
+
+        System.out.println("Pulsado");
     }
 
     public void changeBoardtiles(DragEvent dragEvent) {
-        if (dragEvent.getDragboard().hasString()){
+        if (dragEvent.getDragboard().hasString()) {
             dragEvent.acceptTransferModes(TransferMode.ANY);
 
         }
 
     }
 
-    public void setBoardtile1(DragEvent dragEvent)  {
-
+    public void setBoardtile1(DragEvent dragEvent) {
         if (dragEvent.getSource() instanceof Rectangle) {
 
             boardtile = (Rectangle) dragEvent.getSource();
 
 
-            if (boardtile.getOpacity() == 0) {
+            if (primeraLetra == true) {
 
-                String str = dragEvent.getDragboard().getString();
-                boardtile.setOpacity(1);
-                boardtext1.setVisible(true);
-                boardtext1.setText(str);
-                draggedrect.setVisible(false);
-                draggedvalue.setVisible(false);
-                draggedtext.setVisible(false);
+
+                if (boardtile.getLayoutX() >= 419 && boardtile.getLayoutX() <= 642 && boardtile.getLayoutY() == 456) {
+                    mostrarLetras(dragEvent);
+                    primeraLetra = false;
+
+                } else {
+                    JOptionPane.showMessageDialog(null, "Posición inválida. Coloque la ficha inicial en el centro del tablero.");
+
+
+                }
+
+            } else {
+                mostrarLetras(dragEvent);
             }
         }
     }
 
+    private void mostrarLetras(DragEvent dragEvent) {
+        if (boardtile.getOpacity() == 0) {
 
-    public void bagDragOver(DragEvent dragEvent) {
-        if (dragEvent.getDragboard().hasString()){
-            dragEvent.acceptTransferModes(TransferMode.ANY);
+            String str = dragEvent.getDragboard().getString();
+
+            boardtile.setOpacity(1);
+
+            texto(str, boardtile.getLayoutX(), boardtile.getLayoutY());
+
+            draggedrect.setVisible(false);
+            draggedvalue.setVisible(false);
+            draggedtext.setVisible(false);
+        }
+    }
+
+
+        public void bagDragOver (DragEvent dragEvent){
+            if (dragEvent.getDragboard().hasString()) {
+                dragEvent.acceptTransferModes(TransferMode.ANY);
+
+            }
+
 
         }
 
 
-    }
+        public void bagDragDropped (DragEvent dragEvent){
+
+            setTiles(draggedtext, draggedvalue);
+        }
 
 
 
+    private void texto(String str, double layoutX, double layoutY) {
+        boardtext1 = new Text();
+        boardtext1.setVisible(true);
+        boardtext1.setText(str);
+        boardtext1.setX(layoutX + 15);
+        boardtext1.setY(layoutY + 40);
+        boardtext1.setFill(Color.BLACK);
+        boardtext1.setFont(Font.font(null, FontWeight.BOLD, 36));
 
 
-    public void bagDragDropped(DragEvent dragEvent) {
+        int valorx= (int) (layoutX-primeraposx)/separacionpalabras;
+        int valory= (int) (layoutY-primeraposy)/separacionpalabras;
+        String unirletra=str+"-"+valorx+"-"+valory;
 
-        setTiles(draggedtext,draggedvalue);
+        linkedlist.insertTileValue(unirletra);
+        System.out.println("-----");
+        linkedlist.displayList();
+        System.out.println("---");
+
+
+
+        pantalla.getChildren().add(boardtext1);
     }
 
 }
+
+

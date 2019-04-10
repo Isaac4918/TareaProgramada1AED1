@@ -10,11 +10,30 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
+          <root url="jar://$USER_HOME$/Downloads/json-simple-1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
           <root url="file://E:/Downloads/json-simple-1.1.jar" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
         <jarDirectory url="file://E:/Downloads/json-simple-1.1.jar" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://E:/Downloads/jar_files" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://E:/Downloads/jar_files" recursive="false" />
       </library>
     </orderEntry>
   </component>

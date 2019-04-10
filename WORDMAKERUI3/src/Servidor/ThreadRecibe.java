@@ -1,66 +1,59 @@
 package Servidor;
 
-import java.io.*;
+import java.io.EOFException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.net.Socket;
 import java.net.SocketException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ThreadRecibe implements Runnable {
+    private final ChatPrincipalServidor main;
     private String mensaje;
     private ObjectInputStream entrada;
     private Socket cliente;
     private int clientnum;
-    private String contrasena;
-    public static boolean ciclo=true;
-    public static int modo=0;
 
-
-    public ThreadRecibe(Socket cliente,String contrasena){
+    public ThreadRecibe(Socket cliente, ChatPrincipalServidor main, int clientnum){
         this.cliente = cliente;
+        this.main = main;
         this.clientnum=clientnum;
-        this.contrasena=contrasena;
     }
 
+    public void mostrarMensaje(String mensaje){
+        main.areaTexto.append(mensaje); }
 
     public void run() {
+        try {
+            entrada = new ObjectInputStream(cliente.getInputStream());
+        }catch (IOException ex){
+            Logger.getLogger(ThreadRecibe.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        do{
+            try{
+                mensaje = (String)entrada.readObject();
+                main.mostrarMensaje(mensaje);
 
+            }catch (SocketException ex){
 
-            try {
-                while(ciclo) {
-                    try {
-                        entrada = new ObjectInputStream(cliente.getInputStream());
-                    } catch (IOException ex) {
-                        Logger.getLogger(ThreadRecibe.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    mensaje = (String) entrada.readObject();
-                    if (mensaje!=null) {
-                        System.out.println(mensaje);
-
-
-                        //modo contrasena
-                        if (modo == 0) {
-                            if (contrasena.equals(mensaje)) {
-                                System.out.println("Contrasena correcta");
-                                modo = 1;
-                                ThreadEnvia.turno++;
-                            }
-                        }
-                    }
-                    Thread.sleep(5000);
-
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            }catch(EOFException eofException){
+                main.mostrarMensaje("Fin de la conexión");
+                break;
             }
+            catch(IOException ex){
+                Logger.getLogger(ThreadRecibe.class.getName()).log(Level.SEVERE, null, ex);
+            }catch (ClassNotFoundException classNotFoundException){
+                main.mostrarMensaje("Objeto desconocido");
+            }
+        }while(!mensaje.equals("Servidor>>>TERMINATE"));
+        try{
+            entrada.close();
+            cliente.close();
+        }catch (IOException ioException){
+            ioException.printStackTrace();
+        }
+        main.mostrarMensaje("Fin de la conexión");
+        System.exit(0);
     }
-
-
-
-
-    }
-
+}

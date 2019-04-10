@@ -1,7 +1,6 @@
 package sample;
 
 
-import ClienteFinal.Cliente;
 import Json.CreateJson;
 import Servidor.ChatPrincipalServidor;
 import Cliente.ChatPrincipalCliente;
@@ -38,20 +37,21 @@ public class Controller extends Ui implements Runnable {
     };
     Thread t3= new Thread(){
         public void run() {
-            ThreadEnvia.numerodejugadores= Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero de jugadores"));
         }
     };
 
 
 
     public void CREATEPLAY(MouseEvent mouseEvent) throws Exception {
+        PropertiesFile pr=new PropertiesFile();
+        pr.crearProperties();
+        pr.LeerProperties();
         CreateJson cr = new CreateJson();
         cr.crearjson();
         System.out.println("CREATE PLAY");
         System.out.println("HOLA");
-        t1.start();
-        t2.start();
-        t3.start();
+
+
 
         cont1.create();
 
@@ -71,7 +71,6 @@ public class Controller extends Ui implements Runnable {
     public void JOINPLAY(MouseEvent mouseEvent) throws Exception {
 
         System.out.println("JOINING GAME");
-        String codigoLeído=(JOptionPane.showInputDialog("Digite el códgo de invitación"));
 
         cont1.create();
 

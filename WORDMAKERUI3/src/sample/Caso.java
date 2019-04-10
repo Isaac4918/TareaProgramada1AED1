@@ -6,8 +6,6 @@ import Servidor.ThreadEnvia;
 
 import javax.swing.*;
 
-import static Cliente.ThreadEnvia.valor;
-
 public class Caso {
     public static String mensaje="";
     public static String number;
@@ -15,8 +13,6 @@ public class Caso {
     public static int valor;
     public static String CasoServer(){
         valor= Integer.parseInt(JOptionPane.showInputDialog("Ingrese valor al Servidor"));
-        int numerodeJugador=ChatPrincipalServidor.servernum;
-        String nombredeJugador=ChatPrincipalServidor.nameIP;
         String jsondata=cr.getJSonValue();
         switch(valor){
         case 1: mensaje= number;  //numero de jugador
@@ -32,11 +28,10 @@ public class Caso {
     }
     public static String CasoCliente(){
         valor= Integer.parseInt(JOptionPane.showInputDialog("Ingrese valor al Cliente"));
-        int numerodeJugador=ChatPrincipalServidor.servernum;
-        String nombredeJugador=ChatPrincipalServidor.nameIP;
+
         String jsondata=cr.getJSonValue();
         switch(valor){
-            case 1: mensaje= nombredeJugador;  //numero de jugador
+            case 1: mensaje= "HOLA";  //numero de jugador
                 break;
             case 2:  mensaje= "Introducir contrasena";//contrasena
                 break;

@@ -1,8 +1,5 @@
 package Cliente;
 
-import sample.Caso;
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -10,37 +7,48 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 public class ThreadEnvia implements Runnable {
+    private final ChatPrincipalCliente main;
     private ObjectOutputStream salida;
-    public static String mensaje;
+    private String mensaje;
     private Socket conexion;
-    public static boolean ciclo=true;
-    public static int valor=1;
 
-    public ThreadEnvia(Socket conexion){
+    public ThreadEnvia(Socket conexion, final ChatPrincipalCliente main){
         this.conexion = conexion;
+        this.main = main;
 
+        main.campoTexto.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent event) {
+                mensaje = event.getActionCommand();
+                enviarDatos(mensaje);
+                main.campoTexto.setText("");
+            }
+        });
+    }
+
+    private void enviarDatos(String mensaje){
+        try{
+            salida.writeObject("Cliente>>> "+mensaje);
+            salida.flush();
+            main.mostrarMensaje("Cliente>>> "+mensaje);
+        }catch (IOException ioException){
+            main.mostrarMensaje("Error escribiendo Mensaje");
+        }
+    }
+
+    public void mostrarMensaje(String mensaje){
+        main.areaTexto.append(mensaje);
     }
 
     public void run(){
         try{
-            while(ciclo) {
-                salida = new ObjectOutputStream(conexion.getOutputStream());
-                salida.writeObject(mensaje);
-                System.out.println("Cliente Enviado>>> " + mensaje);
-                salida.flush();
+            salida = new ObjectOutputStream(conexion.getOutputStream());
+            salida.flush();
 
-                if (valor<5){
-                    valor++;
-                }
-
-                Thread.sleep(5000);
-            }
         }catch (IOException ioException){
             ioException.printStackTrace();
         }catch (NullPointerException ex){
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
     }
 }
