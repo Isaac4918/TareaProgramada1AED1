@@ -18,11 +18,6 @@ public class Main {
         System.out.println("____________________________________________________________________________________________");
         //System.out.println(Abc.A.getCantidad());
         Palabra p1 = new Palabra();
-        p1.add(Abc.A);
-        p1.add(Abc.B);
-        p1.add(Abc.C);
-        p1.add(Abc.D);
-        p1.add(Abc.E);
         System.out.println(p1.Index(0).getLetra());*/
 
         Juego Scrabble = new Juego();
