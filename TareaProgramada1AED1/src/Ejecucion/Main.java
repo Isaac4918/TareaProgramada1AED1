@@ -21,8 +21,6 @@ public class Main {
         System.out.println(p1.Index(0).getLetra());*/
 
         Juego Scrabble = new Juego();
-        Scrabble.abc.A.setPosy(14);
-        Scrabble.abc.A.setPosx(14);
         Palabra p1 = new Palabra();
 
         Scrabble.abc.H.setPosx(6);
