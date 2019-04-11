@@ -1,5 +1,6 @@
 package sample;
 
+import Cliente.ThreadEnvia;
 import javafx.beans.property.BooleanProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -98,6 +99,7 @@ public class Controller1 {
     public void create() throws Exception {
         interfaz1.newUI(1);
     }
+
 
     public void createTiles(MouseEvent mouseEvent) {
         Button1.setVisible(false);
@@ -213,10 +215,7 @@ public class Controller1 {
     }
 
     public void submitButton(MouseEvent mouseEvent) throws IOException {
-        System.out.println("Buscando Servidor...");
-        cliente = new Socket(ip,4999);
-
-        System.out.println("Conectado a: "+cliente.getInetAddress().getHostName());
+        ThreadEnvia.sendmessageclient();
 
         System.out.println("Pulsado");
     }
@@ -310,6 +309,7 @@ public class Controller1 {
 
         pantalla.getChildren().add(boardtext1);
     }
+
 
 }
 

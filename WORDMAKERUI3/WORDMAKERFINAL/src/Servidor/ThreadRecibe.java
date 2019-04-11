@@ -1,31 +1,35 @@
-package Cliente;
+package Servidor;
 
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.Socket;
 import java.net.SocketException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ThreadRecibe implements Runnable {
-    private  final ChatPrincipalCliente main;
+    private final ChatPrincipalServidor main;
     private String mensaje;
     private ObjectInputStream entrada;
-    private Socket cliente;
+    public static Socket cliente1;
+    private int clientnum;
+    private int numerodejugadores;
 
-    public ThreadRecibe(Socket cliente, final ChatPrincipalCliente main){
-        this.cliente = cliente;
+    public ThreadRecibe(ArrayList<Object> cliente, ChatPrincipalServidor main,int numerodejugadores,int contrasena){
+        cliente1 = (Socket) cliente.get(1);
         this.main = main;
+        this.clientnum=clientnum;
+        this.numerodejugadores=numerodejugadores;
     }
 
     public void mostrarMensaje(String mensaje){
-        main.areaTexto.append(mensaje);
-    }
+        main.areaTexto.append(mensaje); }
 
     public void run() {
         try {
-            entrada = new ObjectInputStream(cliente.getInputStream());
+            entrada = new ObjectInputStream(cliente1.getInputStream());
         }catch (IOException ex){
             Logger.getLogger(ThreadRecibe.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -33,6 +37,7 @@ public class ThreadRecibe implements Runnable {
             try{
                 mensaje = (String)entrada.readObject();
                 main.mostrarMensaje(mensaje);
+
             }catch (SocketException ex){
 
             }catch(EOFException eofException){
@@ -44,10 +49,10 @@ public class ThreadRecibe implements Runnable {
             }catch (ClassNotFoundException classNotFoundException){
                 main.mostrarMensaje("Objeto desconocido");
             }
-        }while(!mensaje.equals("Cliente>>>TERMINATE"));
+        }while(!mensaje.equals("Servidor>>>TERMINATE"));
         try{
             entrada.close();
-            cliente.close();
+            cliente1.close();
         }catch (IOException ioException){
             ioException.printStackTrace();
         }

@@ -16,6 +16,7 @@ import java.util.concurrent.CompletableFuture;
 public class Controller extends Ui implements Runnable {
     Ui interfaz0=new Ui();
     Ui interfaz1=new Ui();
+
     Controller1 cont1 = new Controller1();
     public int codigo=0;
     public static String codigoleido="";
@@ -24,6 +25,7 @@ public class Controller extends Ui implements Runnable {
         interfaz0.newUI(0);
 
     }
+
     Thread t1=new Thread(){
         public void run() {
             ChatPrincipalServidor cs = new ChatPrincipalServidor();
@@ -50,10 +52,8 @@ public class Controller extends Ui implements Runnable {
         cr.crearjson();
         System.out.println("CREATE PLAY");
         System.out.println("HOLA");
-
-
-
         cont1.create();
+
 
 
 

@@ -1,5 +1,8 @@
-package Servidor;
+package Cliente;
 
+import sample.Controller1;
+
+import javax.swing.*;
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -8,21 +11,21 @@ import java.net.SocketException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ThreadRecibe implements Runnable {
-    private final ChatPrincipalServidor main;
-    private String mensaje;
+public class ThreadRecibe<T extends Comparable> implements Runnable {
+    private  final ChatPrincipalCliente main;
+    private Object mensaje;
     private ObjectInputStream entrada;
     private Socket cliente;
-    private int clientnum;
+    public String[] contrasenaarray;
+    public int contrasena=1;
+    public String contrasenareal;
 
-    public ThreadRecibe(Socket cliente, ChatPrincipalServidor main, int clientnum){
+
+    public ThreadRecibe(Socket cliente, final ChatPrincipalCliente main){
         this.cliente = cliente;
         this.main = main;
-        this.clientnum=clientnum;
     }
 
-    public void mostrarMensaje(String mensaje){
-        main.areaTexto.append(mensaje); }
 
     public void run() {
         try {
@@ -32,9 +35,25 @@ public class ThreadRecibe implements Runnable {
         }
         do{
             try{
-                mensaje = (String)entrada.readObject();
-                main.mostrarMensaje(mensaje);
+                mensaje = entrada.readObject();
+                System.out.println(mensaje);
 
+                if (mensaje instanceof String[]){
+                    System.out.println("Ingrese contrasena");
+                    contrasenaarray= (String[]) mensaje;
+                    contrasenareal=contrasenaarray[1];
+                    while(Integer.parseInt(contrasenareal)!=contrasena){
+                        contrasena= Integer.parseInt(JOptionPane.showInputDialog("Ingrese contrasena"));
+                    }
+                    System.out.println("Contrasena correcta");
+                    try {
+                        System.out.println("iniciar partida");
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+
+                }
             }catch (SocketException ex){
 
             }catch(EOFException eofException){
@@ -46,7 +65,7 @@ public class ThreadRecibe implements Runnable {
             }catch (ClassNotFoundException classNotFoundException){
                 main.mostrarMensaje("Objeto desconocido");
             }
-        }while(!mensaje.equals("Servidor>>>TERMINATE"));
+        }while(!mensaje.equals("Cliente>>>TERMINATE"));
         try{
             entrada.close();
             cliente.close();

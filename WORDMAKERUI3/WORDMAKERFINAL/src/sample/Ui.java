@@ -24,6 +24,9 @@ public class  Ui {
         if (Scenenumber==2){
             scenetype="final.fxml";
         }
+        if (Scenenumber==3){
+            scenetype="button.fxml";
+        }
 
 
         Parent root = FXMLLoader.load(getClass().getResource(scenetype));
