@@ -23,7 +23,8 @@ public class Main {
         p1.add(Abc.C);
         p1.add(Abc.D);
         p1.add(Abc.E);
-        System.out.println(p1.Index(2).getLetra());*/
+        System.out.println(p1.Index(0).getLetra());*/
+
         Juego Scrabble = new Juego();
         Scrabble.abc.A.setPosy(14);
         Scrabble.abc.A.setPosx(14);
@@ -46,10 +47,10 @@ public class Main {
         Scrabble.tablero.colocarLetra(Scrabble.abc.A, Scrabble.abc.A.getPosx(), Scrabble.abc.A.getPosy() );
         p1.add(Scrabble.abc.A);
         Scrabble.tablero.printTablero();
-        System.out.println(Scrabble.buscaPalabra(p1));
 
-
-
+        System.out.println("___________________________________");
+        System.out.println(Scrabble.revisaPalabra(p1,1));
+        System.out.println(Scrabble.puntaje1);
 
 
 	}

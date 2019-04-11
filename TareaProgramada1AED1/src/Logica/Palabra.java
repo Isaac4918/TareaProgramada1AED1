@@ -4,11 +4,11 @@ public class Palabra extends Letra {
     private int size;
     private Letra head;
     private Letra tail;
-    private int puntaje;
+    public int puntaje;
 
 
     public Palabra() {
-        this.head = new Letra();
+        this.head = null;
         this.tail = this.head;
         this.size = 0;
     }
@@ -29,6 +29,7 @@ public class Palabra extends Letra {
             this.tail.next = letra;
             this.tail = letra;
         }
+        this.puntaje += letra.getValor();
         this.size ++;
     }
 
@@ -74,7 +75,7 @@ public class Palabra extends Letra {
         Letra letra = this.head;
         int i = 0;
         if(this.size >= indice) {
-            while (i-1 != indice) {
+            while (i != indice) {
                 letra = letra.next;
                 i ++;
             }
