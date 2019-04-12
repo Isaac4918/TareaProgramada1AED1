@@ -1,4 +1,4 @@
-package Logica;
+package sample;
 
 public class Letra {
     String letra;
@@ -49,12 +49,12 @@ public class Letra {
         this.next = next;
     }
 
-    public void colocar() {
-        this.cantidad--;
+    public void colocar(){
+        this.cantidad --;
     }
 
-    public void devolver() {
-        this.cantidad++;
+    public void devolver(){
+        this.cantidad ++;
     }
 
     public int getPosx() {
@@ -79,5 +79,6 @@ public class Letra {
         System.out.print(posx);
         System.out.print(", ");
         System.out.print(posy);
-    }
+}
+
 }

@@ -19,12 +19,13 @@ public class Tablero {
     }
 
     public void colocarLetra(Letra L1, int x, int y){
+        Letra tmp = L1;
         if(this.tablero[y][x] == null){
             if(L1.cantidad > 0){
-                this.tablero[y][x] = L1;
+                this.tablero[y][x] = tmp;
                 L1.colocar();
-                L1.setPosx(x);
-                L1.setPosy(y);
+                tmp.setPosx(x);
+                tmp.setPosy(y);
             }
             else{
                 System.err.println("Cantidad insuficiente de letras");

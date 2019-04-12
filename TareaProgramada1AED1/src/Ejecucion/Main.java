@@ -18,9 +18,11 @@ public class Main {
         System.out.println("____________________________________________________________________________________________");
         //System.out.println(Abc.A.getCantidad());
         Palabra p1 = new Palabra();
-        System.out.println(p1.Index(0).getLetra());*/
+        System.out.println(p1.Index(0).getLetra());
 
         Juego Scrabble = new Juego();
+        Scrabble.abc.A.setPosy(14);
+        Scrabble.abc.A.setPosx(14);
         Palabra p1 = new Palabra();
 
         Scrabble.abc.H.setPosx(6);
@@ -43,7 +45,7 @@ public class Main {
 
         System.out.println("___________________________________");
         System.out.println(Scrabble.revisaPalabra(p1,1));
-        System.out.println(Scrabble.puntaje1);
+        System.out.println(Scrabble.puntaje1);*/
 
 
 	}
