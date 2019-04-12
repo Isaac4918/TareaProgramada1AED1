@@ -75,8 +75,7 @@ public class ChatPrincipalCliente extends JFrame {
 
             main.habilitarTexto(true);
 
-            executor.execute(new ThreadRecibe(cliente, main));
-            executor.execute(new ThreadEnvia(cliente, main));
+            executor.execute(new ThreadRecibeyEnvia(cliente, main));
         }catch(IOException ex){
             Logger.getLogger(ChatPrincipalCliente.class.getName()).log(Level.SEVERE, null, ex);
 

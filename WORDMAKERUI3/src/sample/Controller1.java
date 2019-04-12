@@ -1,10 +1,8 @@
 package sample;
 
-import Cliente.ThreadEnvia;
-import javafx.beans.property.BooleanProperty;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+import Cliente.ThreadRecibeyEnvia;
+import Servidor.ChatPrincipalServidor;
+import Servidor.ThreadEnvia;
 import javafx.scene.control.Button;
 import javafx.scene.input.*;
 import javafx.scene.layout.AnchorPane;
@@ -16,17 +14,10 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
 import javax.swing.*;
-import java.beans.Visibility;
 import java.io.IOException;
-import java.lang.reflect.Method;
-import java.net.InetAddress;
+import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.*;
-
-
-import java.net.URL;
-import java.util.List;
 
 public class Controller1 {
 
@@ -78,6 +69,7 @@ public class Controller1 {
 
 
     public Text source4;
+    private Socket client;
 
     private static ServerSocket servidor;
     private static Socket cliente;
@@ -214,11 +206,19 @@ public class Controller1 {
 
     }
 
+
     public void submitButton(MouseEvent mouseEvent) throws IOException {
-        ThreadEnvia.sendmessageclient();
 
         System.out.println("Pulsado");
+
+        System.out.println("Pulsado 56");
+
+
+        System.out.println("Pulsado 56");
+
     }
+
+
 
     public void changeBoardtiles(DragEvent dragEvent) {
         if (dragEvent.getDragboard().hasString()) {

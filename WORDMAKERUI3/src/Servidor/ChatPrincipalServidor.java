@@ -122,10 +122,9 @@ public class ChatPrincipalServidor extends JFrame{
                 }
             }
 
-                executor.execute(new ThreadRecibe(object, main,numerodejugadores,contrasena));
-                executor.execute(new ThreadEnvia(object, main,numerodejugadores,contrasena));
-                System.out.println(object.get(0));
-                System.out.println(object.get(1));
+
+                executor.execute(new ThreadEnvia(object, main, numerodejugadores, contrasena));
+
         } catch (IOException ex) {
             Logger.getLogger(ChatPrincipalServidor.class.getName()).log(Level.SEVERE, null, ex);
         }
